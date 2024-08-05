@@ -1,10 +1,22 @@
 import {App, PluginSettingTab, Setting} from "obsidian";
-import MyPlugin from "../main";
+import TechRadarPlugin from "../main";
 
-export class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
 
-	constructor(app: App, plugin: MyPlugin) {
+interface TechRadarSettings {
+	mySetting: string;
+}
+
+export const DEFAULT_SETTINGS: TechRadarSettings = {
+	mySetting: 'default'
+}
+
+export type {TechRadarSettings};
+
+export class TechRadarSettingsTab extends PluginSettingTab {
+	settings: TechRadarSettings;
+	plugin: TechRadarPlugin;
+
+	constructor(app: App, plugin: TechRadarPlugin) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}

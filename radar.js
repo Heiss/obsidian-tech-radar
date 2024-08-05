@@ -38,6 +38,7 @@ function radar_visualization(config) {
 
 	// TODO for digital garden, this needs to be adjusted
 	config.entries = config.entries.map(entry => {
+		console.log("asd", entry)
 		if (!entry.link.startsWith("http")) {
 			entry.link = "obsidian://open?file=" + entry.link;
 		}

@@ -2,7 +2,7 @@
 
 import {ItemView, ViewStateResult, WorkspaceLeaf} from "obsidian";
 import {rootMain, rootService} from "./LogConfig";
-import MyPlugin from "../main";
+import TechRadarPlugin from "../main";
 
 export const VIEW_TYPE_EXAMPLE = "example-view";
 
@@ -10,12 +10,11 @@ interface ITechRadarPersistedState {
 	techRadarContent: string;
 }
 
-export class SampleView extends ItemView implements ITechRadarPersistedState {
+export class TechRadarView extends ItemView implements ITechRadarPersistedState {
 	techRadarContent: string;
-	svgElement: SVGElement;
-	private plugin: MyPlugin;
+	private plugin: TechRadarPlugin;
 
-	constructor(plugin: MyPlugin, leaf: WorkspaceLeaf) {
+	constructor(plugin: TechRadarPlugin, leaf: WorkspaceLeaf) {
 		super(leaf);
 		this.plugin = plugin;
 
