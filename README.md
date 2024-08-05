@@ -1,4 +1,6 @@
-# Obsidian Sample Plugin
+# Obsidian Tech Radar
+
+Needs [Dataview](https://github.com/blacksmithgu/obsidian-dataview) to work.
 
 This is a sample plugin for Obsidian (https://obsidian.md).
 
